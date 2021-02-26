@@ -31,7 +31,7 @@ if (empty($_POST["terms"])) {
     $terms = $_POST["terms"];
 }
 
-$EmailTo = "yourname@domain.com";
+$EmailTo = "corporate@lordsecurator.com";
 $Subject = "New meeting request from Evolo landing page";
 
 // prepare email body text
@@ -55,7 +55,7 @@ $Body .= "\n";
 // send email
 $success = mail($EmailTo, $Subject, $Body, "From:".$email);
 // redirect to success page
-if ($success && $errorMSG == ""){
+if ($success && $errorMSG == "Email Delivered Successfully"){
    echo "success";
 }else{
     if($errorMSG == ""){
